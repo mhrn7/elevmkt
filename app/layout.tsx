@@ -12,17 +12,17 @@ export const metadata: Metadata = {
     "Agência especializada em tráfego pago e automações com IA para clínicas médicas. Atraímos leads qualificados e convertemos automaticamente com agentes de IA 24/7. Resultados comprovados em mais de 200 clínicas.",
   keywords:
     "tráfego pago, paid ads, marketing médico, automações IA, agentes IA, CRM médico, leads médicos, marketing para clínicas, Google Ads médico, Meta Ads clínicas",
-  authors: [{ name: "MedAI Agency" }],
-  creator: "MedAI Agency",
-  publisher: "MedAI Agency",
+  authors: [{ name: "Elev Marketing" }],
+  creator: "Elev Marketing",
+  publisher: "Elev Marketing",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "pt_BR",
     alternateLocale: "en_US",
     url: "https://medaiagency.com",
-    siteName: "MedAI Agency",
-    title: "MedAI Agency - Tráfego Pago + Automações IA para Clínicas Médicas",
+    siteName: "Elev Marketing",
+    title: "Elev Marketing- Tráfego Pago + Automações IA para Clínicas Médicas",
     description:
       "Transforme visitantes em pacientes com IA avançada. Especializados em clínicas médicas com resultados comprovados.",
     images: [
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MedAI Agency - Marketing Digital para Clínicas",
+        alt: "Elev Marketing - Marketing Digital para Clínicas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MedAI Agency - Tráfego Pago + Automações IA",
+    title: "Elev Marketing - Tráfego Pago + Automações IA",
     description: "Transforme visitantes em pacientes com IA avançada",
     images: ["/og-image.jpg"],
   },
@@ -77,7 +77,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "MedAI Agency",
+              name: "Elev Marketing",
               description: "Agência especializada em tráfego pago e automações com IA para clínicas médicas",
               url: "https://medaiagency.com",
               logo: "https://medaiagency.com/logo.png",
