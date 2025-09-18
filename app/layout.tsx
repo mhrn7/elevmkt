@@ -60,6 +60,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/jpeg" sizes="16x16" href="/favicon-16x16.jpg" />
+        <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon-32x32.jpg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.jpg" />
         <link rel="canonical" href="https://medaiagency.com" />
         <link rel="alternate" hrefLang="pt-BR" href="https://medaiagency.com" />
         <link rel="alternate" hrefLang="en-US" href="https://medaiagency.com/en" />
