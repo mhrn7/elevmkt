@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   creator: "Elev Marketing",
   publisher: "Elev Marketing",
   robots: "index, follow",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.jpg", sizes: "16x16", type: "image/jpeg" },
+      { url: "/favicon-32x32.jpg", sizes: "32x32", type: "image/jpeg" },
+    ],
+    apple: [{ url: "/apple-touch-icon.jpg", sizes: "180x180", type: "image/jpeg" }],
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -59,18 +67,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/jpeg" sizes="16x16" href="/favicon-16x16.jpg" />
-        <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon-32x32.jpg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.jpg" />
-        <link rel="canonical" href="https://medaiagency.com" />
-        <link rel="alternate" hrefLang="pt-BR" href="https://medaiagency.com" />
-        <link rel="alternate" hrefLang="en-US" href="https://medaiagency.com/en" />
-        <link rel="alternate" hrefLang="x-default" href="https://medaiagency.com" />
-        <meta name="geo.region" content="BR" />
-        <meta name="geo.placename" content="São Paulo" />
-        <meta name="ICBM" content="-23.5505,-46.6333" />
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+        <Suspense fallback={null}>{children}</Suspense>
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,10 +96,6 @@ export default function RootLayout({
             }),
           }}
         />
-      </head>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
       </body>
     </html>
   )
