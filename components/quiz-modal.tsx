@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { ArrowRight, ArrowLeft, CheckCircle, Loader2 } from "lucide-react"
 
@@ -17,7 +16,6 @@ const translations = {
         title: "Informações Básicas",
         fields: {
           name: "Nome Completo",
-          business: "Tipo de Negócio",
           phone: "Telefone para Contato",
         },
       },
@@ -60,7 +58,6 @@ const translations = {
         title: "Basic Information",
         fields: {
           name: "Full Name",
-          business: "Business Type",
           phone: "Contact Phone",
         },
       },
@@ -110,7 +107,6 @@ export function QuizModal({ isOpen, onClose, language }: QuizModalProps) {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     name: "",
-    business: "",
     phone: "",
     currency: "",
     revenue: "",
@@ -142,7 +138,6 @@ export function QuizModal({ isOpen, onClose, language }: QuizModalProps) {
         },
         body: JSON.stringify({
           name: formData.name,
-          businessType: formData.business,
           phone: formData.phone,
           currency: formData.currency.toUpperCase(),
           revenueRange: formData.revenue,
@@ -172,7 +167,6 @@ export function QuizModal({ isOpen, onClose, language }: QuizModalProps) {
     setIsSubmitting(false)
     setFormData({
       name: "",
-      business: "",
       phone: "",
       currency: "",
       revenue: "",
@@ -180,7 +174,7 @@ export function QuizModal({ isOpen, onClose, language }: QuizModalProps) {
     onClose()
   }
 
-  const isStep1Valid = formData.name && formData.business && formData.phone
+  const isStep1Valid = formData.name && formData.phone
   const isStep2Valid = formData.currency && formData.revenue
 
   return (
@@ -247,40 +241,6 @@ export function QuizModal({ isOpen, onClose, language }: QuizModalProps) {
                     placeholder="João Silva"
                     className="border-cyan-300/50 focus:border-cyan-400 bg-white/80"
                   />
-                </div>
-
-                <div>
-                  <Label htmlFor="business">{t.steps[1].fields.business}</Label>
-                  <Select
-                    value={formData.business}
-                    onValueChange={(value) => setFormData({ ...formData, business: value })}
-                  >
-                    <SelectTrigger className="border-cyan-300/50 focus:border-cyan-400 bg-white/80">
-                      <SelectValue
-                        placeholder={language === "pt" ? "Selecione seu tipo de negócio" : "Select your business type"}
-                      />
-                    </SelectTrigger>
-                    <SelectContent className="bg-white/95 backdrop-blur-xl border-cyan-300/30">
-                      <SelectItem value="clinica">
-                        {language === "pt" ? "Clínica/Consultório" : "Clinic/Office"}
-                      </SelectItem>
-                      <SelectItem value="estetica">
-                        {language === "pt" ? "Centro de Estética" : "Aesthetic Center"}
-                      </SelectItem>
-                      <SelectItem value="advocacia">
-                        {language === "pt" ? "Escritório de Advocacia" : "Law Firm"}
-                      </SelectItem>
-                      <SelectItem value="imobiliaria">
-                        {language === "pt" ? "Imobiliária/Corretor" : "Real Estate/Broker"}
-                      </SelectItem>
-                      <SelectItem value="loja">{language === "pt" ? "Loja/E-commerce" : "Store/E-commerce"}</SelectItem>
-                      <SelectItem value="servicos">
-                        {language === "pt" ? "Prestação de Serviços" : "Service Provider"}
-                      </SelectItem>
-                      <SelectItem value="consultoria">{language === "pt" ? "Consultoria" : "Consulting"}</SelectItem>
-                      <SelectItem value="outros">{language === "pt" ? "Outros" : "Others"}</SelectItem>
-                    </SelectContent>
-                  </Select>
                 </div>
 
                 <div>

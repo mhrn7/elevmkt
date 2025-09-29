@@ -7,7 +7,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Elev Marketing - Tráfego Pago + Automações IA para Clínicas Médicas",
+  title: "Elev A.I Marketing - Tráfego Pago + Automações IA para Clínicas Médicas",
   description:
     "Agência especializada em tráfego pago e automações com IA para clínicas médicas. Atraímos leads qualificados e convertemos automaticamente com agentes de IA 24/7. Resultados comprovados em mais de 200 clínicas.",
   keywords:

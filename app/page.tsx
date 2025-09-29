@@ -17,7 +17,7 @@ const translations = {
       contact: "Contato",
     },
     hero: {
-      badge: "Agência #1 em Tráfego Pago + IA",
+      badge: "Seu parceiro #1 em Marketing Inteligente",
       title: "Eleve Seus Resultados com",
       titleHighlight: "Tráfego Estratégico + IA",
       subtitle:
@@ -53,7 +53,7 @@ const translations = {
       ],
     },
     about: {
-      badge: "Sobre a ELEV",
+      badge: "Sobre a ELEV A.I",
       title: "Elevamos Negócios ao Próximo Nível",
       description:
         "Somos especialistas em potencializar investimentos em tráfego pago com inteligência e precisão. Nossa metodologia exclusiva une estratégias avançadas de mídia digital com automação inteligente via IA, garantindo performance escalável e retorno sobre investimento (ROI) mensurável. Combinamos criatividade, dados e tecnologia para criar campanhas que não apenas atraem cliques, mas convertem em vendas, leads e crescimento sustentável. Cada ação é pensada para gerar impacto direto nos seus resultados.",
@@ -348,9 +348,9 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <img src="/elev-logo-clean.png" alt="ELEV Marketing" className="w-20 h-20" />
+              <img src="/elev-logo-clean.png" alt="ELEV A.I Marketing" className="w-20 h-20" />
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">
-                ELEV MARKETING
+                ELEV A.I MARKETING
               </span>
             </div>
 
@@ -675,9 +675,9 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-4 gap-8">
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
-                <img src="/elev-logo-footer.png" alt="ELEV Marketing" className="w-12 h-12" />
+                <img src="/elev-logo-footer.png" alt="ELEV A.I Marketing" className="w-12 h-12" />
                 <span className="text-xl font-bold bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">
-                  ELEV MARKETING
+                  ELEV A.I MARKETING
                 </span>
               </div>
               <p className="text-gray-300 mb-6 max-w-md">{t.footer.description}</p>
@@ -703,7 +703,7 @@ export default function LandingPage() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-300">
-            © 2024 ELEV MARKETING. {t.footer.rights}
+            © 2024 ELEV A.I MARKETING. {t.footer.rights}
           </div>
         </div>
       </footer>
